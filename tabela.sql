@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS public."funcionario"
     sexo "char",
     "DTNasc" date,
     salario double precision,
-    "codDep" integer NOT NULL,
+    "codDep" integer,
     PRIMARY KEY (codigo)
 );
 
