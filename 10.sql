@@ -11,4 +11,3 @@ left join funcionario f
 on f.codigo = proj."codResp"
 left join departamento d2
 on f."codDep" = d2.codigo;
-;
