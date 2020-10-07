@@ -11,6 +11,6 @@ where p."codDep" = d.codigo
 group by d.codigo;
 
 select d.descricao, f.nome, tot.total
-from funcionario f, departamento d left join "totalProjetosDep" tot
-on tot.dep = d.codigo
-where d."codGerente" = f.codigo;
+from departamento d
+left join funcionario f on f.codigo = d."codGerente"
+left join "totalProjetosDep" tot on tot.dep = d.codigo;
