@@ -1,0 +1,19 @@
+a)
+Caso aconteça de ter valores nulos nos dados pode acontecer em uma consulta aninhada dá um problema de não encontrar dados, pois existem consultas que precisa de valores para funcionar.
+
+b)
+Usando o exemplo o seguinte código:
+select * from funcionario f
+left/right join departamento d on f.coddep = d.codigo
+
+agora tendo em base que existem 5 departamentos e 8 funcionarios
+caso usasse left join, o select resultaria 8 linhas, se usasse right join, resultaria em 5
+Imagine que cada join representa o acrescimo de x colunas
+no caso acima, o letf join adicionaria x colunas na tabela funcionario, por isso resultaria em 8 linhas
+já se fosse right join, ele adicionaria x colunas na tabela departamento, logo apenas 5 linhas surgiriam
+
+
+c)
+o Full seria como um right e um left join sumultaneo, por conta disso não pode acontecer de existir valores nulo na tabela,
+caso aconteça será uma linha nula.
+A maneira de fazer o join é o UNION
